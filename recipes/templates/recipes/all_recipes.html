@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h1>All Recipes</h1>
+        </div>
+
+        <div class="col-12">
+            {% if recipes %}
+                <ul>
+                    {% for recipe in recipes %}
+                        <li>
+                            <a href="#">{{ recipe.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="m-3">No recipes to display</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
